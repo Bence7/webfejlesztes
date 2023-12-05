@@ -1,0 +1,13 @@
+<form [formGroup]="carForm" (ngSubmit)="submitForm()" class="max-w-md mx-auto mt-8">
+    <div class="mb-4">
+      <label for="brand" class="block text-gray-600">Brand:</label>
+      <input type="text" id="brand" formControlName="brand" class="w-full border rounded py-2 px-3">
+    </div>
+  
+    <div class="mb-4">
+      <label for="model" class="block text-gray-600">Model:</label>
+      <input type="text" id="model" formControlName="model" class="w-full border rounded py-2 px-3">
+    </div>
+
+    <button type="submit" (click)="submitForm()" class="bg-blue-500 text-white py-2 px-4 rounded">Update Car</button>
+  </form>

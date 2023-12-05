@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered and Vertical Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
+
+    <button (click)="listCars()"
+        class="bg-gray-700 text-white px-4 py-2 rounded-md my-2 hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300">
+        List the cars
+    </button>
+
+    <button (click)="addCar()"
+        class="bg-gray-700 text-white px-4 py-2 rounded-md my-2 hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300">
+        Add car
+    </button>
+
+    <button (click)="deleteAllCar()"
+        class="bg-gray-700 text-white px-4 py-2 rounded-md my-2 hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300">
+        Delete all cars
+    </button>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<body class="bg-gray-100 p-4">
+    <div *ngIf="cars.length === 0" class="text-red-500">There are no cars!</div>
+
+    <div *ngIf="cars.length > 0">
+        <h2 class="text-2xl font-bold mb-4">Available Cars</h2>
+
+        <table class="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr>
+                    <th class="border-b">Id</th>
+                    <th class="border-b">Brand</th>
+                    <th class="border-b">Model</th>
+                    <th class="border-b">Select</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let car of cars" class="hover:bg-gray-100">
+                    <td class="border-b text-center">{{ car.id }}</td>
+                    <td class="border-b text-center">{{ car.brand }}</td>
+                    <td class="border-b text-center">{{ car.model }}</td>
+
+                    <td class="border-b text-center">
+                        <button (click)="unSelectCar(car.id)" class="bg-yellow-500 text-white px-2 py-1 rounded">Select</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
